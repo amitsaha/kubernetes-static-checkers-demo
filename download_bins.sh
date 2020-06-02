@@ -22,6 +22,10 @@ chmod +x copper
 wget https://github.com/open-policy-agent/conftest/releases/download/v0.18.2/conftest_0.18.2_Linux_x86_64.tar.gz
 tar xzf conftest_0.18.2_Linux_x86_64.tar.gz
 
+wget https://github.com/stelligent/config-lint/releases/latest/download/config-lint_Linux_x86_64.tar.gz
+tar xzf config-lint_Linux_x86_64.tar.gz
+chmod +x config-lint
+
 popd
 
 

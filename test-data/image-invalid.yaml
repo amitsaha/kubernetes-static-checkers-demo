@@ -18,6 +18,11 @@ spec:
         args: ["-text", "hello-world"]
         ports:
         - containerPort: 5678        
+      - name: http-echo-demo
+        image: hashicorp/http-echo
+        args: ["-text", "hello-world"]
+        ports:
+        - containerPort: 5679
 ---
 apiVersion: v1
 kind: Service

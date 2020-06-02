@@ -1,0 +1,22 @@
+version: 1
+description: Rules for Kubernetes spec files
+type: Kubernetes
+files:
+  - "*.yaml"
+rules:
+  - id: DEPLOYMENT_IMAGE_TAG
+    severity: FAILURE
+    message: Deployment must use a valid image tag
+    resource: Deployment
+    assertions:
+      - every:
+          key: spec.template.spec.containers
+          expressions:
+            - key: image
+              op: not-contains
+              value: latest
+            - key: image
+              op: contains
+              value: ":"
+    tags:
+      - deployment
