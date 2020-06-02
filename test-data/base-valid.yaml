@@ -4,6 +4,9 @@ metadata:
   name: http-echo
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      app: http-echo
   template:
     metadata:
       labels:
