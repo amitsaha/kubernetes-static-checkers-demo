@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: hello-world
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "true"
+    cert-manager.io/issuer: amitsaha-in-gmail-com
+spec:
+  tls:
+  - hosts:
+    - http-echo.amitsaha.apps.k8spin.cloud 
+    secretName: hello-world-certificate
+  rules:
+  - host: http-echo.amitsaha.apps.k8spin.cloud 
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: http-echo
+          servicePort: 5678
+
