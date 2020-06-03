@@ -11,12 +11,9 @@ rules:
     assertions:
       - every:
           key: spec.template.spec.containers
-          expressions:
-            - key: image
-              op: not-contains
-              value: latest
+          expressions:            
             - key: image
               op: contains
-              value: ":"
+              value: "my-company/my-app:"
     tags:
       - deployment
