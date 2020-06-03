@@ -13,7 +13,5 @@ rules:
           key: spec.template.spec.containers
           expressions:            
             - key: image
-              op: contains
-              value: "my-company/my-app:"
-    tags:
-      - deployment
+              op: starts-with
+              value: "my-company.com/"

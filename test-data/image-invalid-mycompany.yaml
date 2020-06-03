@@ -13,14 +13,12 @@ spec:
         app: http-echo
     spec:
       containers:
-      - name: http-echo
-        image: hashicorp/http-echo:latest
-        args: ["-text", "hello-world"]
+      - name: myapp
+        image: myapp:1.0
         ports:
         - containerPort: 5678        
-      - name: http-echo-demo
-        image: hashicorp/http-echo
-        args: ["-text", "hello-world"]
+      - name: mysidecar
+        image: mysidecar:0.1
         ports:
         - containerPort: 5679
 ---
