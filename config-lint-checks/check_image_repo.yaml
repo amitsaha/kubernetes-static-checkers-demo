@@ -4,9 +4,9 @@ type: Kubernetes
 files:
   - "*.yaml"
 rules:
-  - id: DEPLOYMENT_IMAGE_TAG
+  - id: DEPLOYMENT_IMAGE_REPOSITORY
     severity: FAILURE
-    message: Deployment must use a valid image tag
+    message: Deployment must use a valid image repository
     resource: Deployment
     assertions:
       - every:
