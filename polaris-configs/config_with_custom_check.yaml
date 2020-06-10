@@ -1,0 +1,35 @@
+checks:
+  cpuRequestsMissing: warning
+  cpuLimitsMissing: warning
+  memoryRequestsMissing: warning
+  memoryLimitsMissing: warning
+  tagNotSpecified: danger
+  pullPolicyNotAlways: danger
+  readinessProbeMissing: warning
+  livenessProbeMissing: warning
+  hostNetworkSet: warning
+  hostPortSet: warning
+  hostIPCSet: danger
+  hostPIDSet: danger
+  notReadOnlyRootFilesystem: warning
+  privilegeEscalationAllowed: danger
+  runAsRootAllowed: warning
+  runAsPrivileged: danger
+  dangerousCapabilities: danger
+  insecureCapabilities: warning
+  # custom checks
+  checkImageRepo: danger
+
+customChecks:
+  checkImageRepo:
+    successMessage: Image registry is valid
+    failureMessage: Image registry is not valid
+    category: Images
+    target: Container
+    schema:
+      '$schema': http://json-schema.org/draft-07/schema
+      type: object
+      properties:
+        image:
+          type: string
+          pattern: ^my-company.com/.+$
