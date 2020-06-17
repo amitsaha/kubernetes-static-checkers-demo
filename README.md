@@ -8,7 +8,7 @@ This repository contains resources referred to in the article on learnk8s.io.
 - [config-lint-checks](./config-lint-checks) contains example checks for `config-lint`
 - [conftest-checks](./conftest-checks) contains example checks for `conftest`
 - [copper-checks](./copper-checks) contains example checks for `copper`
-- [polaris-checks](./polaris-checks) contains example checks for `polaris`
+- [polaris-configs](./polaris-configs) contains example config with custom checks for `polaris`
 
 ## Helpers
 
