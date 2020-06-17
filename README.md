@@ -1,6 +1,7 @@
 # Article resources for learnk8s
 
-This repository contains resources referred to in the article on learnk8s.io.
+This repository contains resources referred to in the article "Validating Kubernetes YAML for best practice and policies"
+on learnk8s.io published [here](https://learnk8s.io/validating-kubernetes-yaml).
 
 ## Key resources
 
