@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: http-echo
-        image: hashicorp/http-echo
-        args: ["-text", "hello-world"]
+        image: jxlwqq/http-echo
+        args: ["--text", "hello-world"]
         ports:
         - containerPort: 5678        
 ---
